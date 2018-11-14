@@ -1,0 +1,145 @@
+ 1)
+ public class Array {
+
+    public static void main(String[] args) {
+
+        Scanner s=new Scanner(System.in);
+
+        System.out.println("enter number of elements");
+
+        int n=s.nextInt();
+
+        int arr[]=new int[n];
+
+        System.out.println("enter elements");
+
+        for(int i=0;i<n;i++){
+            arr[i]=s.nextInt();
+
+        }
+
+        for(int i: arr){
+
+            System.out.println(i);
+
+        }
+
+
+    }
+******************************************************************************************************************************
+2)
+
+    public class BubbleSortExample {  
+        static void bubbleSort(int[] arr) {  
+            int n = arr.length;  
+            int temp = 0;  
+             for(int i=0; i < n; i++){  
+                     for(int j=1; j < (n-i); j++){  
+                              if(arr[j-1] > arr[j]){  
+                                   
+                                     temp = arr[j-1];  
+                                     arr[j-1] = arr[j];  
+                                     arr[j] = temp;  
+                             }  
+                              
+                     }  
+             }  
+      
+        }  
+        public static void main(String[] args) {  
+                    int arr[] ={3,60,35,2,45,320,5};  
+                     
+                    System.out.println("Array Before Bubble Sort");  
+                    for(int i=0; i < arr.length; i++){  
+                            System.out.print(arr[i] + " ");  
+                    }  
+                    System.out.println();  
+                      
+                    bubbleSort(arr); 
+                     
+                    System.out.println("Array After Bubble Sort");  
+                    for(int i=0; i < arr.length; i++){  
+                            System.out.print(arr[i] + " ");  
+                    }  
+       
+            }  
+    }  
+**************************************************************************************8
+3)
+public static void main(String[] args) {
+    int[] arr1 = new int[]{1, 2, 3, 4, 5};
+    int[] arr2 = new int[]{3, 2, 5, 9, 11};
+    getIntersection(arr1, arr2);
+}
+
+public static Object[] getIntersection(int[] arr1, int[] arr2) {
+    List<Integer> list = new ArrayList<Integer>();
+    for (int i = 0; i < arr1.length; i++) {
+        for (int j = 0; j < arr2.length; j++) {
+            if (arr1[i] == arr2[j]) {
+                list.add(arr1[i]);
+            }
+        }
+    }
+    return list.toArray();
+}
+*****************************************************************************************
+4)
+public class TwoDimensionalArrays
+{
+public static void main (String args[])
+{
+    final int size1 = 2, size2 = 4, size3 = 5;
+    int [][] numbers = {{20,25,34,19,33}, {11,17,15,45,26}, {27,22,9,41,13}};        
+    int row = 0, col = 0;
+
+        for(row = 0; row <= size1; row++); //loops through rows
+        {
+            for(col = 0; col <= size2; col++); //loops through columns
+            {
+                System.out.println(numbers[row][col]);
+            }
+        System.out.print("\n"); //takes a new line before each new print
+        }
+    }
+ }
+******************************************************************************************************
+5)
+import java.util.Scanner;
+
+public class JavaProgram
+{
+   public static void main(String args[])
+   {
+       int size, i, j, temp;
+       int arr[] = new int[50];
+       Scanner scan = new Scanner(System.in);
+	   
+       System.out.print("Enter Array Size : ");
+       size = scan.nextInt();
+	   
+       System.out.print("Enter Array Elements : ");
+       for(i=0; i<size; i++)
+       {
+           arr[i] = scan.nextInt();
+       }
+	   
+       j = i - 1;  
+       i = 0;         
+	   
+       while(i<j)
+       {
+           temp = arr[i];
+           arr[i] = arr[j];
+           arr[j] = temp;
+           i++;
+           j--;
+       }
+	   
+       System.out.print("Now the Reverse of Array is : \n");
+       for(i=0; i<size; i++)
+       {
+           System.out.print(arr[i]+ "  ");
+       }       
+   }
+}
